@@ -9,5 +9,7 @@ To spin up this server:
   2. Open that folder within your code editor.
   3. Type node (filename).js in a new Terminal window within your code editor.
   4. Open a web browser and navigate to 'localhost:3000' in the url navigation bar.
-  5. Upon entering text into the input field and pressing 'Send', the browser will send a response back to the server and create a .txt file.
+  5. Upon entering text into the input field and pressing 'Send', the browser will send a response back to the server and create or alter the existing .txt file.
+
+
   
