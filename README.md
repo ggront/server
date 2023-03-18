@@ -11,5 +11,5 @@ To spin up this server:
   4. Open a web browser and navigate to 'localhost:3000' in the url navigation bar.
   5. Upon entering text into the input field and pressing 'Send', the browser will send a response back to the server and create or alter the existing .txt file.
 
-
+When the server is running, you can open the developer tools within the browser to monitor the network of sending a response to the backend. i.e click 'Send' after entering a response in the input field and you will see a POST method with a 200 status code to the backend.
   
