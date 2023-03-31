@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login: Unauthorized</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+  <style>
+    body {
+      background-color: rgba(67, 79, 103, 0.5);
+    }
+    .form {
+      text-align: left;
+    }
+    h1 {
+      font-family: Geneva;
+      font-size: 30px;
+      display: block; 
+    }
+    label{
+      font-family: helvetica;
+      font-size: 15px;
+    }
+    #submit {
+      border-radius: 8px;
+      height: 20px;
+      width: 60px;
+      background-color: black;
+      color: white;
+      border: none;
+      font-size: 9px;
+    }
+
+    #submit:hover{
+      cursor: pointer;
+      background-color: rgb(54, 54, 54);
+    }
+    .creds {
+      background-color: rgba(100, 176, 85, 0.602);
+    }
+    
+    #clock {
+      text-align: right;
+      font-size: 20px;
+      font-family: helvetica;
+  
+    }
+    p {
+      font-size: 16px;
+      margin-top: -8px;
+    }
+  </style>
+  <script>
+    setInterval(showTime, 1000);
+      function showTime() {
+        let time = new Date();
+        let hour = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+        am_pm = "AM";
+      
+        if (hour > 12) {
+            hour -= 12;
+            am_pm = " PM";
+        }
+        if (hour == 0) {
+            hr = 12;
+            am_pm = " AM";
+        }
+      
+        hour = hour < 10 ? "0" + hour : hour;
+        min = min < 10 ? "0" + min : min;
+        sec = sec < 10 ? "0" + sec : sec;
+  
+        let currentTime = hour + ":" 
+                + min + ":" + sec + am_pm;
+      
+        document.querySelector("#clock")
+                .innerHTML = currentTime;
+              }
+        showTime();
+  </script>
+  <body>
+    <div id="header">
+      <p style="font-family:Tahoma; ">Unauthorized Session</p>
+    </div>
+    <div id="clock" style="float:right; width:50%;">...</div>
+    <div class="form">
+      <h1>Login: </h1>
+      <form method="POST" action="/login">
+        <label>Username:</label><br>
+        <input class="creds" type="text" name="username"><br>
+        <label>Password:</label><br>
+        <input class="creds" type="password" id="password" name="password"><br><br>
+        <input id="submit" type="submit" value="LOGIN">
+      </form>
+    </div>
+  </body>
+</html>
