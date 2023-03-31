@@ -10,11 +10,11 @@
 <body>
     <script>
         function oTP(){
-            let auth = prompt("Enter Key: ")
-            let randNum = ('ENTER THE KEY HERE THAT YOU WOULD LIKE TO SET AS A SECOND AUTHENTICATION METHOD')
-            if(auth != randNum){
+            let authPrompt = prompt("Enter Key: ")
+            let authKey = ('ENTER THE KEY HERE THAT YOU WOULD LIKE TO SET AS A SECOND AUTHENTICATION METHOD')
+            if(authPrompt != authKey){
                 window.location.href = `/login.html`
-            }else if (auth === randNum){
+            }else if (authPrompt === authKey){
                 window.location.href = `/navigation.html`
             }
         }
