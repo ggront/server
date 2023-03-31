@@ -10,6 +10,7 @@ To spin up this server:
   3. You must add a Username and Password in the 'users' object on line 7 of the script.
   4. Type 'node (filename).js' in a new Terminal window within your code editor.
   5. Open a web browser and navigate to 'localhost:{PORT}' in the url navigation bar. The port hard coded in the Server.js script is 5000 but you can change that on line 6 of the script BUT you must also change the port within some of the HTML scripts as well.
+  6. On line 14 of the 'redirect.html' script, you must add your own key for the second authentication method. If you do not update the code, your key will be 'ENTER THE KEY HERE THAT YOU WOULD LIKE TO SET AS A SECOND AUTHENTICATION METHOD'.
 
 When the server is running, you can open the developer tools within the browser to monitor the network of sending a response to the server. In the future, SSH and a DBMS will be enabled for this script (long in the future).
   
