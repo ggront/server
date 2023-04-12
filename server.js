@@ -5,8 +5,8 @@ const { threadId } = require('worker_threads');
 
 const PORT = 5000;
 const users = [
-  { username: 'username', password: 'password' },
-  { username: 'username', password: 'password' }
+  { username: 'Enter-Username', password: 'Enter-Password' },
+  { username: 'Enter-Username', password: 'Enter-Password' }
 ];
 
 const server = http.createServer((req, res) => {
@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(data);
     });
-  }else if (req.method === 'POST' && req.url === '/login') {
+  } else if (req.method === 'POST' && req.url === '/login') {
     let body = '';
     req.on('data', chunk => {
       body += chunk.toString();
@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
       if (user) {
         res.writeHead(302, {Location: '/redirect.html'}).end();
 
-      }else {
+      } else {
         const filePath = path.join(__dirname, 'login.html');
         res.writeHead(302, { 'Location': '/unauthorized.html' })
         res.end();
@@ -56,7 +56,7 @@ const server = http.createServer((req, res) => {
         });
       }
     });
-  }else if (req.method === 'GET' && req.url === '/redirect.html') {
+  } else if (req.method === 'GET' && req.url === '/redirect.html') {
     const filePath = path.join(__dirname, 'redirect.html');
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) {
@@ -69,7 +69,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(data);
     });
-  }else if (req.method === 'GET') {
+  } else if (req.method === 'GET') {
     const filePath = path.join(__dirname, req.url);
     fs.readFile(filePath, (err, data) => {
       if (err) {
@@ -82,11 +82,15 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(data);
     });
-  }else {
+  } else {
     res.writeHead(400, { 'Content-Type': 'text/plain' });
     res.end('Unsupported request');
   }
 });
+
+/* 
+Below block will spin up the server and log to the console which port is being utilized
+*/
 
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
