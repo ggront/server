@@ -46,6 +46,10 @@
           let apps = '/apps.html'
           window.location.href = `http://localhost:5000${apps}`
         }
+        function todoList(){
+          let todo = '/todo.html'
+          window.location.href = `http://localhost:5000${todo}`
+        }
     </script>
   </head>
   <body>
@@ -58,6 +62,7 @@
         <!-- Add buttons below to redirect to a new page -->
         <button class="button" onclick="redirectDashboard()">Dashboard</button>
         <button class="button" onclick="redirectApps()">Apps</button>
+        <button class="button" onclick="todoList()">To Do</button>
       </h2>
   </body>
   <script src="time.js"></script>
