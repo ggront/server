@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Authorized</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> 
     <style>
       body {
         background-color: rgba(67, 79, 103, 0.5);
@@ -36,21 +36,7 @@
         font-size: 20px;
         font-family: helvetica;
       }
-    </style> 
-    <script>
-        function redirectDashboard(){
-          let dashboard = '/dashboard.html'
-          window.location.href = `http://localhost:5000${dashboard}`
-        }
-        function redirectApps(){
-          let apps = '/apps.html'
-          window.location.href = `http://localhost:5000${apps}`
-        }
-        function todoList(){
-          let todo = '/todo.html'
-          window.location.href = `http://localhost:5000${todo}`
-        }
-    </script>
+    </style>
   </head>
   <body>
     
@@ -65,5 +51,7 @@
         <button class="button" onclick="todoList()">To Do</button>
       </h2>
   </body>
-  <script src="time.js"></script>
+  <script src="scripts.js"></script>
 </html>
+
+<!--- Need to create two new scripts for the redirectDashboard and the redirectApps function-->
