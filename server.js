@@ -5,8 +5,8 @@ const { threadId } = require('worker_threads');
 
 const PORT = 5000;
 const users = [
-  { username: 'gront', password: 'g.dolin12' },
-  { username: 'kenna', password: 'password' }
+  { username: 'username', password: 'password' },
+  { username: 'username', password: 'password' }
 ];
 
 const server = http.createServer((req, res) => {
