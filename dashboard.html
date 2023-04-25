@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Authorized</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> 
     <style>
       body {
         background-color: rgba(67, 79, 103, 0.5);
@@ -35,20 +35,14 @@
         cursor: pointer;
       }
     </style> 
-    <script>
-      function returnNav(){
-        let navigation = '/navigation.html'
-        window.location.href = `http://localhost:5000${navigation}`
-      }
-    </script>
   </head>
   <body>
     <div id="clock" style="float:right; width:50%;">...</div>
     <div id="header">
-        <p style="font-family:Tahoma; ">Authorized Session</p>
+        <p style="font-family:Tahoma; width: 20% ">Authorized Session</p>
     </div>
     <button class="button" onclick="returnNav()">Back</button>
-    <div>Dashboard</div>
+    <h2 style="text-align: center; margin-bottom: 100px"><u>Dashboard</u><br>
   </body>
-  <script src="time.js"></script>
+  <script src="scripts.js"></script>
 </html>
