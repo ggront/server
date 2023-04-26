@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Unauthorized</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   </head>
   <style>
   body {
@@ -24,18 +24,12 @@
     font-size: 20px;
     font-family: helvetica;
   }
-</style> 
-<script>
-  function backButton(){
-    let loginPage = '/login.html'
-    window.location.href = `http://localhost:5000${loginPage}`
-  }
-</script>
+</style>
   <body>
     <div id="clock" style="float:right; width:50%;">...</div>
     <h1>Unauthorized</h1>
     <p>You are not authorized for this server.</p>
     <button onclick="backButton()">Back</button>
   </body>
-  <script src="time.js"></script>
+  <script src="scripts.js"></script>
 </html>
